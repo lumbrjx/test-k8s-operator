@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opx
+  template:
+    metadata:
+      labels:
+        app: opx
+    spec:
+      containers:
+        - name: opx-container
+          image: opx:latest
+          ports:
+            - containerPort: 8080
