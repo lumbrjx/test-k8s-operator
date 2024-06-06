@@ -1,0 +1,6 @@
+apiVersion: hlw.io/v1
+kind: HelloWorld
+metadata:
+  name: sample
+spec:
+  message: "hello, World!"
